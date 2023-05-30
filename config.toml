@@ -9,9 +9,9 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-  editURL = "http://pdm.lsupathways.org/admin/"
-  description = "Educational material for LSU Programming Digital Media"
-  author = "Tate Carson"
+  editURL = "http://video-game-design.lsupathways.org/admin/"
+  description = "Educational material for LSU Video Game Design"
+  author = "Erin Demastes"
   showVisitedLinks = true
   themeVariant = "blue"
 
@@ -28,7 +28,7 @@ unsafe = true
 
 [Languages]
 [Languages.en]
-title = "Educational material for LSU Programming Digital Media"
+title = "Educational material for LSU Video Game Design"
 weight = 1
 languageName = "English"
 # staticDir = "/"
