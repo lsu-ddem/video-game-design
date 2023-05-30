@@ -1,8 +1,6 @@
 ---
-title: "Programming Digital Media"
+title: "Video Game Design"
 ---
-
-<script async src="//jsfiddle.net/oyz8zg40/1/embed/result/"></script>
 
 ## Course Description and Objectives
   
