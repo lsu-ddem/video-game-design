@@ -2,8 +2,7 @@
 title: "Video Game Design"
 ---
 
-## Video Game Design
-<br>
+# Video Game Design
 
 ## Course Description and Objectives
   
