@@ -5,6 +5,8 @@ title: "Video Game Design"
 # Video Game Design
 
 ## Course Description and Objectives
+
+<!-- New CMS Widget Script Do Not Delete -->
   
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
