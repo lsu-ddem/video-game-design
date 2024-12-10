@@ -1,5 +1,5 @@
 ---
-title: "Integrations Project"
+title: Game Design Microgames
 weight: 5
 ---
 The remainder of the course will focus around your final comprehensive project. This project will be one that you design and create from start to finish. However there are a few rules and guidelines to go over before you begin working. 

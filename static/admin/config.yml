@@ -140,9 +140,9 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
 
-  # Unit 3 - Your First Game: Basket Catch  
-  - name: "Your First Game: Basket Catch" 
-    label: "Your First Game: Basket Catch" 
+  # Unit 3 - Your First Game Basket Catch  
+  - name: "Your First Game Basket Catch" 
+    label: "Your First Game Basket Catch" 
     folder: "content/3_BasketCatch" 
     create: true 
     fields: 
@@ -151,9 +151,9 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
  
 
-# Unit 4 - Your Second Game: Asteroids   
-  - name: "Your Second Game: Asteroids" 
-    label: "Your Second Game: Asteroids" 
+# Unit 4 - Your Second Game Asteroids   
+  - name: "Your Second Game Asteroids" 
+    label: "Your Second Game Asteroids" 
     folder: "content/4_Asteroids" 
     create: true 
     fields: 
@@ -162,9 +162,9 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
  
 
-# Unit 5 - Game Design: Microgames  
-  - name: "Game Design: Microgames" 
-    label: "Game Design: Microgames" 
+# Unit 5 - Game Design Microgames  
+  - name: "Game Design Microgames" 
+    label: "Game Design Microgames" 
     folder: "content/5_Microgames" 
     create: true 
     fields: 
