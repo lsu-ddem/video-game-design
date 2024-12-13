@@ -1,4 +1,4 @@
 ---
 title: Data Types
-weight: 2
+weight: 1
 ---
