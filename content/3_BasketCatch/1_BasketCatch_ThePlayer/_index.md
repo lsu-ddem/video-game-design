@@ -12,9 +12,9 @@ We'll start by making a new scene for our player by clicking the "+" on the scen
 Once we make the scene we'll need to select the proper root node. Let's take a second to think about the needs of this scene. The player will be controlling this scene directly through inputs. Think about the nodes that move, and think about which of those nodes allows for direct control. What node should be the root node for the player scene?
 
 <details>
-<div class = "right-arrow"></div><summary>>Click for Answer</summary>
+<div class = "right-arrow"></div><summary>Reveal Answer</summary>
 
-CharacterBody2D
+- CharacterBody2D
 
 </details>
 
@@ -35,13 +35,15 @@ Once you find your image, go ahead and download it. Make sure that it has a **tr
 
 
 
-Next let's add some more nodes to our scene. We'll need to add two nodes, one to display an image and another to define the shape of our player. What would these nodes be?
+Next let's add some more nodes to our scene. We'll need to add two nodes, one to display an image and another to define the shape of our player. What would these nodes be? Be careful when adding these new nodes, they should both be direct *children* of the root node.
 
 <details>
-<summary>Click for Answer</summary>
+<summary cursor="pointer">Reveal Answer</summary>
 
-Sprite2D (Image)
+- Sprite2D (Image)
 
-CollisionShape2D (Shape)
+- CollisionShape2D (Shape)
 
 </details>
+
+
