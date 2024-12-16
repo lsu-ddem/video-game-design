@@ -11,15 +11,35 @@ For **2D** images there are two categories for how the images are produced: *Ras
 
 ![A raster image of the moon that has been scaled up](../../assets/reveal-js/css/zoomoon.png "A raster image of the moon that has been scaled up")
 
+In contrast, *Vector* images tell the computer points in space to draw "curves" between. Think of *Vector* graphics formats as instructions for how to draw an image instead of the image itself. This allows for scaling images up and down without blurriness. 
+
+Some image formats also allow for **transparency**. These images can have **transparent** backgrounds, leaving only the image we want to see instead of including a black or white background. All *vector* graphics formats can have **transparency** but only certain *raster* formats allow for **transparency**.
+
+
+
+| Raster Format | Vector Format |
+|  :---------:  | :-----------: |
+|.jpeg          | .svg          |
+|.png*          | .gif          |
+|.gif*          |               |
+|.webp*         |               |
+
+*has **transparency**
+
+
+
+
 Topic - Graphics
+
 Lesson - Graphics Identification
+
 Goals
-* Identify a game's genre
-* Identify the similar characteristics of games within the same genre
-* Differentiate genre and aesthetics
+- Identify a game's genre
+- Identify the similar characteristics of games within the same genre
+- Differentiate genre and aesthetics
 Outcomes
-* Description of the gameplay characeristics of multiple games
-* Description of what separates the games in the genre
+- Description of the gameplay characeristics of multiple games
+- Description of what separates the games in the genre
 Content and Standards alignment
 Topic
 Topic
