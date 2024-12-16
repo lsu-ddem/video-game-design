@@ -30,14 +30,16 @@ Some image formats also allow for **transparency**. These images can have **tran
 
 
 Topic - Graphics
+
 Lesson - Graphics Identification
+
 Goals
-* Identify a game's genre
-* Identify the similar characteristics of games within the same genre
-* Differentiate genre and aesthetics
+- Identify a game's genre
+- Identify the similar characteristics of games within the same genre
+- Differentiate genre and aesthetics
 Outcomes
-* Description of the gameplay characeristics of multiple games
-* Description of what separates the games in the genre
+- Description of the gameplay characeristics of multiple games
+- Description of what separates the games in the genre
 Content and Standards alignment
 Topic
 Topic
