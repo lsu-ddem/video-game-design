@@ -1,4 +1,4 @@
 ---
-title: Basic Structures
-weight: 2
+title: Structure
+weight: 3
 ---
