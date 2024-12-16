@@ -18,6 +18,7 @@ Some image formats also allow for **transparency**. These images can have **tran
 
 
 | Raster Format | Vector Format |
+|  :---------:  | :-----------: |
 |.jpeg          | .svg          |
 |.png*          | .gif          |
 |.gif*          |               |
