@@ -118,7 +118,7 @@ func _physics_process(delta: float) -> void:
 ```
 
 
-First, let's get rid of any references to moving on the **y-axis**. The **property** *velocity* tells the CharacterBody2D how many pixels to move per second, we can see that *velocity* is referenced throughout this script, sometimes followed by a **.y** or **.x**. These lines only modify the *velocity* on that axis. Let's go ahead and remove all of the lines that include *velocity.y*
+First, let's get rid of any references to moving on the **y-axis**. The **property** *velocity* tells the CharacterBody2D how many pixels to move per second, we can see that *velocity* is referenced throughout this script, sometimes followed by a **.y** or **.x**. These lines only modify the *velocity* on that axis. We also see a line that references *gravity*, this line is applying a constant downward force on our player. Let's go ahead and remove all of the lines that include *velocity.y* or *gravity*. (Hint: Make sure to remove any *if* statements that are empty after deleting code.)
 
 
 <details style="background-color:rgba(92, 184, 92, 0.25);">
@@ -133,10 +133,6 @@ const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-        
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
