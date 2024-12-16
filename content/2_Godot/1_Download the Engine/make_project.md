@@ -6,7 +6,6 @@ Instructions
 
 This project will be the main project you will use to workthrough demonstrations, starter scenes and beginner concepts.
 
-Make Your First Project
 Welcome to your first adventure with Godot 4! Follow these simple steps to create and save your first project:
 
 ### Step 1: Open Godot Engine
