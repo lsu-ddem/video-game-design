@@ -1,0 +1,7 @@
+---
+title: Catching Things - Area2D and Signals
+weight: 2
+---
+
+Now that we can control our player and they can't be so easily pushed off the screen, lets turn our attention to catching our falling objects. Here we'll introduce a new node: the **Area2D**. We'll use an **Area2D** any time that we want to be able to monitor if an object is either *entering* or *exiting* a certain location, such as the the *center* of our player. **Area2D**s communicate this by using **Signals**. Whenever a **PhysicsBody** or another **Area2D** *enters* or *exits* an **Area2D** a **Signal** will be sent out. We can connect this **Signal** to any node that has a **Script** attached to it. This allows us to check when *collisions* are happening and run certain code when that happens.
+

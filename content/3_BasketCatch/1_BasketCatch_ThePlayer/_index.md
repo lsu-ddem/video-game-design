@@ -63,7 +63,7 @@ Depending on the size of your image you may need to resize it. You can do this b
 
 
 <p align="center">
-<video width="640" height="360" autoplay muted>
+<video width="640" height="360" autoplay muted loop>
     <source src="../../media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
 </video>
 </p>
@@ -148,4 +148,124 @@ func _physics_process(delta: float) -> void:
 ```
 
 </details>
+
+Let's go ahead and run our current scene again and try to move the player using the arrow keys. You should be able to move left and right but not up and down. Let's also take a second to make sure that all of our nodes are at origin. Go ahead and click on each node, starting with the root node, and make sure that their **x** and **y** **Position** in the **Inspector** under the **Transform** are both set to **0**.
+
+![Set the position to origin](../../media/BasketCatchImages/Making-the-Player/set-to-origin.png)
+
+
+Now let's add our player to the *Main* scene. Switch to the *Main* scene by either clicking on the "Main" tab in the scene tabs or by double clicking the "main.tscn" file in the *FileSystem* dock. Then drag your player into your *Main* scene, placing them somewhere near the bottom of the screen. Go ahead and run the *Main* scene and attempt to catch the falling apple. What happens? Why does this happen?
+
+
+<details style="background-color:rgba(92, 184, 92, 0.25);">
+<summary style = "cursor:pointer">Reveal Answer</summary>
+
+- Attempting to catch a fruit causes the player to be forced downward. This is because: 
+- The CollisionShape of the basket covers the entirety of the basket instead of just the edges. 
+- While we took out the code referencing movement on the **y-axis** other **PhysicsBodies** can still *push* our player along the **y-axis**.
+
+</details>
+
+
+We'll need to make a few edits to our script and player scene to address these issues. Let's start with our script. Go ahead and click the *script* icon attached to our *Player* node in the scene tree:
+
+![Opening a script from the tree](../../media/BasketCatchImages/Making-the-Player/Opening-a-script-from-the-tree.png)
+
+Then we'll need to add some code that *locks* our player's **y-axis** position. For this we'll need to create a **variable** to store the player's *initial* y position. We'll also need to add our **_ready()** function to this script.
+
+
+```
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+var start_pos = 0
+
+func _ready() -> void:
+	
+	pass
+
+func _physics_process(delta: float) -> void:
+	
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+```
+
+Next we'll need to store the starting **y** position value in our variable *start_pos*. We can access just the **y** value of the **position** property in the same way that the **y** value of the **velocity** property was accessed earlier by putting a **.y** after **position**. (**position.y**) Which function should this be placed in? Remember, we only want to store this value once when the game starts.
+
+<details style="background-color:rgba(92, 184, 92, 0.25);">
+<summary style = "cursor:pointer">Reveal Answer</summary>
+
+- We should place our code in the **_ready()** function. If we put it in the **_physics_process()** function it would be updated every frame.
+- We'll need to edit our **_ready()** function to look like this:
+
+```
+func _ready() -> void:
+	
+    start_pos = position.y  
+    
+	pass
+	
+```
+
+
+</details>
+
+
+We then need to add code to continuously set our *Player*'s **y** postion to the value stored in our *start_pos* variable. Which function should this be placed in? What would the code look like?
+
+<details style="background-color:rgba(92, 184, 92, 0.25);">
+<summary style = "cursor:pointer">Reveal Answer</summary>
+
+- We should place our code in the **_physics_process()** function. If we put it in the **_ready()** function it would only happen once when our game started.
+- We'll need to edit our **_physics_process()** function to look like this:
+
+```
+func _physics_process(delta: float) -> void:
+	
+     position.y = start_pos
+
+    # Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+```
+- Notice that we've essentially done the reverse process. First storing the position value in a variable in the **_ready** function before changing the position value using the variable in the **_physics_process()** function.
+</details>
+
+
+If we our *Main* scene now we'll still notice an issue. While our *Player* now returns to its starting **y** position (most of the time), it now flings apples through the air instead of letting them pass through the middle!
+
+
+<p align="center">
+<video width="640" height="360" autoplay muted loop>
+    <source src="../../media/BasketCatchImages/Making-the-Player/apple-fling.mp4" type="video/mp4">
+</video>
+</p>
+
+
+We'll need to make an edit to the collision of our *Player*, so lets switch back to the *Player* scene by either selecting the "Player" tab or double clicking the "player.tscn" file in the FileSystem. While we've previously only used a single **CollisionShape2D** to define the shape of a **PhysicsBody** we can actually use multiple CollisionShapes if our **PhysicsBody** has gaps in its shape/image. Let's make it so that the only parts of our player that have *collision* are the sides. We want the falling objects to pass through the middle of our *Player* but to bounce off its side. We'll start by editing the current **CollisionShape2D** to cover just the left edge of the image. Then we can duplicate the **CollisionShape2D** by right clicking it in the inspector and selecting "Duplicate" or by using the *duplicate* hotkey **ctrl+d**. We'll then move the duplicated shape to the opposite side of the basket. (Remember: Any edits we make to a scene will also happen to any *instances* of that scene elsewhere in our project.)
+
+
+<p align="center">
+<video width="640" height="360" autoplay muted loop>
+    <source src="../../media/BasketCatchImages/Making-the-Player/duplicate-shape.mp4" type="video/mp4">
+</video>
+</p>
+
+Now our apple should pass right through! Go ahead and run your *Main* scene to test and make sure that apples can fall *through* your *Player* as well as *collide* with its sides.
 
