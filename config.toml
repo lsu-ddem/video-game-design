@@ -21,6 +21,9 @@ home = [ "HTML", "RSS", "JSON"]
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.highlight]
+style = "gdscript"
+
 [outputFormats.Reveal]
   baseName = "index"
   mediaType = "text/html"
