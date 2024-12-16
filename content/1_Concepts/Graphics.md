@@ -13,6 +13,9 @@ For **2D** images there are two categories for how the images are produced: *Ras
 
 In contrast, *Vector* images tell the computer points in space to draw "curves" between. Think of *Vector* graphics formats as instructions for how to draw an image instead of the image itself. This allows for scaling images up and down without blurriness. 
 
+Typically, *Raster* images allow for more detail while *Vector* images allow for better scaling. **Important Note**: Godot *rasterizes* or converts an image to **pixels** all imported images, even *Vector* images. This means that enlarging vector images will not necessarilly produce less blurry results.
+
+
 Some image formats also allow for **transparency**. These images can have **transparent** backgrounds, leaving only the image we want to see instead of including a black or white background. All *vector* graphics formats can have **transparency** but only certain *raster* formats allow for **transparency**.
 
 
@@ -20,11 +23,21 @@ Some image formats also allow for **transparency**. These images can have **tran
 | Raster Format | Vector Format |
 |  :---------:  | :-----------: |
 |.jpeg          | .svg          |
-|.png*          | .gif          |
-|.gif*          |               |
+|.png*          |               |
 |.webp*         |               |
 
 *has **transparency**
+
+
+For the following scenarios, pick the best image format. (More than one file format may work!)
+
+A pixelated image with a transparent background
+
+An image that will be scaled up and down but should maintain its resolution
+
+A photorealistic background
+
+An image of a ball without a transparent background.
 
 
 
@@ -34,12 +47,14 @@ Topic - Graphics
 Lesson - Graphics Identification
 
 Goals
-- Identify a game's genre
-- Identify the similar characteristics of games within the same genre
-- Differentiate genre and aesthetics
+- Know the difference between raster and vector graphics
+- Know the common graphics image formats
+- Understand concepts such as resolution and transparency.
+
 Outcomes
-- Description of the gameplay characeristics of multiple games
-- Description of what separates the games in the genre
+- Able to choose the correct image format to satisfy certain criteria
+- Able to use different image formats interchangably by understanding their underlying characteristics (raster vs vector, transparent vs opaque, etc.)
+
 Content and Standards alignment
 Topic
 Topic
