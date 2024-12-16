@@ -11,7 +11,7 @@ We'll start by making a new scene for our player by clicking the "+" on the scen
 
 Once we make the scene we'll need to select the proper root node. Let's take a second to think about the needs of this scene. The player will be controlling this scene directly through inputs. Think about the nodes that move, and think about which of those nodes allows for direct control. What node should be the root node for the player scene?
 
-<details>
+<details style="background-color:rgba(92, 184, 92, 0.25);">
 <summary style = "cursor:pointer">Reveal Answer</summary>
 
 - CharacterBody2D
@@ -46,7 +46,7 @@ Once you find your image, go ahead and download it. Make sure that it has a **tr
 
 Next let's add some more nodes to our scene. We'll need to add two nodes, one to display an image and another to define the shape of our player. What would these nodes be? Be careful when adding these new nodes, they should both be direct *children* of the root node.
 
-<details>
+<details style="background-color:rgba(92, 184, 92, 0.25);">
 <summary style = "cursor:pointer">Reveal Answer</summary>
 
 - Sprite2D (Image)
@@ -59,4 +59,11 @@ Next let's add some more nodes to our scene. We'll need to add two nodes, one to
 </details>
 
 
-We'll need to 
+Depending on the size of your image you may need to resize it. You can do this by clicking the **Sprite2D** and changing the *Scale* property in the **Inspector**. We'll need to modify the shape of our CollisionShape2D to fit over our image properly. Let's click on the "CollisionShape2D" in the scene tree and change its "Shape" property in the **Inspector**. Let's go ahead and select a *RectangleShape2D* and align it with our image.!
+
+
+<p align="left">
+<video width="640" height="360" autoplay muted>
+    <source src="content/media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
+</video>
+</p>
