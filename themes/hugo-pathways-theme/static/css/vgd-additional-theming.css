@@ -3,6 +3,10 @@ details {
 
 }
 
+summary {
+    cursor: pointer;
+}
+
 .arrow-right {
     width: 0; 
     height: 0; 
