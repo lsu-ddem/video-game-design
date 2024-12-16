@@ -59,11 +59,97 @@ Next let's add some more nodes to our scene. We'll need to add two nodes, one to
 </details>
 
 
-Depending on the size of your image you may need to resize it. You can do this by clicking the **Sprite2D** and changing the *Scale* property in the **Inspector**. We'll need to modify the shape of our CollisionShape2D to fit over our image properly. Let's click on the "CollisionShape2D" in the scene tree and change its "Shape" property in the **Inspector**. Let's go ahead and select a *RectangleShape2D* and align it with our image.!
+Depending on the size of your image you may need to resize it. You can do this by clicking the **Sprite2D** and changing the *Scale* property in the **Inspector**. We'll need to modify the shape of our CollisionShape2D to fit over our image properly. Let's click on the "CollisionShape2D" in the scene tree and change its "Shape" property in the **Inspector**. Let's go ahead and select a *RectangleShape2D* and align it with our image.
 
 
-<p align="left">
+<p align="center">
 <video width="640" height="360" autoplay muted>
-    <source src="content/media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
+    <source src="../../media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
 </video>
 </p>
+
+
+In order for us to move our player we'll need to add a script. Go ahead and click on the player and press the *attach script* button. We'll select the "CharacterBody2D: Basic Movement" template as a starting place. If we've already named our **Root Node** the default script name will be the name of that node! Make sure once you've made the script that it is in your "Player" folder. We'll need to modify this script to make our player behave how we expect it to. 
+
+![New Script Dialogue Box](../../media/BasketCatchImages/Making-the-Player/Player-script.png)
+
+
+After you've saved everything let's try running the current scene to see what happens. Does the player act as you expect?
+
+
+<details style="background-color:rgba(92, 184, 92, 0.25);">
+<summary style = "cursor:pointer">Reveal Answer</summary>
+
+- The player should fall straight down. However, you should be able to move the player to the left and right slightly.
+
+</details>
+
+
+Let's close our game and go back to the **Script** view. In the **Script** view we'll see the default movement code. We'll need to modify this code so that our player will only be able to move left and right, not up and down. Below is the code:
+
+```
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+
+
+```
+
+
+First, let's get rid of any references to moving on the **y-axis**. The **property** *velocity* tells the CharacterBody2D how many pixels to move per second, we can see that *velocity* is referenced throughout this script, sometimes followed by a **.y** or **.x**. These lines only modify the *velocity* on that axis. Let's go ahead and remove all of the lines that include *velocity.y*
+
+
+<details style="background-color:rgba(92, 184, 92, 0.25);">
+<summary style = "cursor:pointer">Reveal Answer</summary>
+
+```
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+        
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+
+
+```
+
+</details>
+
