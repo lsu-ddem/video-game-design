@@ -1,5 +1,5 @@
 ---
 title: Hotkeys and Shortcuts
-weight: 6
+weight: 8
 ---
 # Test
