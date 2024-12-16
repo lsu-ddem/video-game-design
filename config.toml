@@ -22,7 +22,7 @@ home = [ "HTML", "RSS", "JSON"]
 unsafe = true
 
 [markup.highlight]
-style = "gdscript"
+style = "gdscript3"
 
 [outputFormats.Reveal]
   baseName = "index"
