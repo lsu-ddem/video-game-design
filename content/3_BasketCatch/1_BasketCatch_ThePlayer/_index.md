@@ -12,8 +12,10 @@ We'll start by making a new scene for our player by clicking the "+" on the scen
 Once we make the scene we'll need to select the proper root node. Let's take a second to think about the needs of this scene. The player will be controlling this scene directly through inputs. Think about the nodes that move, and think about which of those nodes allows for direct control. What node should be the root node for the player scene?
 
 <details>
-<summary>>Click for Answer</summary>
+<div class = "right-arrow"></div><summary>>Click for Answer</summary>
 
 CharacterBody2D
 
 </details>
+
+Once you've added your node make sure to rename it to "Player" before doing anything else. Then save your scene.
