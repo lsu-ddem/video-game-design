@@ -2,7 +2,7 @@
 title: Downloading the Engine
 weight: 1
 ---
-# To download Godot - 
+# How to Download Godot:
 
 Go to www.godotengine.org
 
