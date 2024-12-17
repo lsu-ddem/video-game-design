@@ -7,7 +7,7 @@ weight: 3
 
 When you work on a project in Godot 4, all of your files and resources are organized in a special structure called the filesystem. Think of it as a virtual organizer where you keep all the things you need for your game. Here’s a simple breakdown:
 
-#### 1\. **res://-Project Root**
+#### 1\. **Project Root - res://**
 
 -   **What it is**: This is the main folder that contains your entire project. When you create a new project, Godot asks you where you want to save it, and it sets up this root folder for you.
 -   **Example**: If your project is named `Doe_Jane_Project1`, then `Doe_Jane_Project1` is your project root.
