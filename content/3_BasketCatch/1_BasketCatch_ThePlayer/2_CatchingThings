@@ -5,3 +5,7 @@ weight: 2
 
 Now that we can control our player and they can't be so easily pushed off the screen, lets turn our attention to catching our falling objects. Here we'll introduce a new node: the **Area2D**. We'll use an **Area2D** any time that we want to be able to monitor if an object is either *entering* or *exiting* a certain location, such as the the *center* of our player. **Area2D**s communicate this by using **Signals**. Whenever a **PhysicsBody** or another **Area2D** *enters* or *exits* an **Area2D** a **Signal** will be sent out. We can connect this **Signal** to any node that has a **Script** attached to it. This allows us to check when *collisions* are happening and run certain code when that happens.
 
+Let's jump over to our *Player* scene. We'll start by adding an **Aread2D** to the root of our scene. We'll see that we have a caution symbol on our **Area2D**, this is because we need to define the *shape* of the **Area2D** using a **CollisionShape2D**. (This will look very similar to how we structure our **PhysicsBodies**) Once you've added your **CollisionShape2D**, select a **Rectangle2D** as its *Shape* in the **Inspector** and place it in the center of your player. Your scene tree and player should look similar to this:
+
+![How your Area2D should look](<../../media/BasketCatchImages/Area2D and Signals/Area2DSetup.png>)
+
