@@ -7,11 +7,11 @@ Now that we can control our player and they can't be so easily pushed off the sc
 
 Let's jump over to our *Player* scene. We'll start by adding an **Aread2D** to the root of our scene. We'll see that we have a caution symbol on our **Area2D**, this is because we need to define the *shape* of the **Area2D** using a **CollisionShape2D**. (This will look very similar to how we structure our **PhysicsBodies**) Once you've added your **CollisionShape2D**, select a **Rectangle2D** as its *Shape* in the **Inspector** and place it in the center of your player. Your scene tree and player should look similar to this:
 
-![How your Area2D should look](<../../media/BasketCatchImages/Area2D and Signals/Area2DSetup.png>)
+![How your Area2D should look](<../../../media/BasketCatchImages/Area2D and Signals/Area2DSetup.png>)
 
 Now that we have our **Area2D** properly configured and placed we'll need to connect a **Signal** to our *Player* script. We'll do this by clicking on our **Area2D** in the scene tree and then opening the **Node** tab on the **Inspector** dock. This will display all of the **Signals** that the **Area2D** can send:
 
-![All of the Area2D Signals](<../../media/BasketCatchImages/Area2D and Signals/Area2DSignals.png>)
+![All of the Area2D Signals](<../../../media/BasketCatchImages/Area2D and Signals/Area2DSignals.png>)
 
 
 We see that we have many option for the type of **Signal** to send, but let's think about what we need. Should we send a signal when another **Area** or a **PhysicsBody** enters our **Area2D**? (Hint: Think about what the falling objects are made out of [you can check the "apple" scene to find out]) Do we need to check when the object **Enters** or **Exits** our **Area2D**? Do you see a **Signal** that satisfies both criteria? (You can hover over a **Signal** to get extra information about it.)
@@ -27,11 +27,11 @@ We see that we have many option for the type of **Signal** to send, but let's th
 
 We connect the signal by either double-clicking it or right-clicking and selecting "Connect...". This will open a dialogue that allows us to select the node to *send* the **Signal** to. As stated above, we can only connect a **Signal** to a node that has a **Script** attached to it. In our *Player* scene the only node with a **Script** is the *root* node itself. We'll go ahead and connect the signal there:
 
-![Connecting a Signal](<../../media/BasketCatchImages/Area2D and Signals/ConnectASignal.png>)
+![Connecting a Signal](<../../../media/BasketCatchImages/Area2D and Signals/ConnectASignal.png>)
 
 This will generate a new **Function** in our *Player* script. Anything that we put in this **Function** will be ran when our *Player* recieves the **Signal** from the **Area2D**. A few important things to notice about this new **Function**: the new **Function**'s name by default will include the name of the **Signal**, a **Function** that is connected to a **Signal** will have a green box and arrow symbol next to its *declaration*, some **Signals** pass an *argument* into the **Function** (we'll discuss this more in depth in this lesson.).
 
-![The Signal Function](<../../media/BasketCatchImages/Area2D and Signals/SignalFunction.png>)
+![The Signal Function](<../../../media/BasketCatchImages/Area2D and Signals/SignalFunction.png>)
 
 
 We see that the **Signal** passes the argument *body* into our **Function**. This is the **PhysicsBody** that is entering our **Area2D**. Let's add some code to test if our **Area2D** is properly recognizing the **PhysicsBodies** being caught by our *Player*. As always, we'll debug by using the **print()** method. We'll want to print the caught object's *name* property. We'll use *dot notation* to do this. Once you've added the code run your *Main* scene to test it.
