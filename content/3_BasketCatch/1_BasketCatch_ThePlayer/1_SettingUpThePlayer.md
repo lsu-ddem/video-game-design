@@ -7,7 +7,7 @@ We'll start by making our player, a basket that can move left and right at the b
 
 We'll start by making a new scene for our player by clicking the "+" on the scenes dock:
 
-![Make a new scene](../../media/BasketCatchImages/Making-the-Player/NewScene1.png)
+![Make a new scene](../../../media/BasketCatchImages/Making-the-Player/NewScene1.png)
 
 Once we make the scene we'll need to select the proper root node. Let's take a second to think about the needs of this scene. The player will be controlling this scene directly through inputs. Think about the nodes that move, and think about which of those nodes allows for direct control. What node should be the root node for the player scene?
 
@@ -27,7 +27,7 @@ Once you've added your node make sure to rename it to "Player" before doing anyt
 
 Let's do some file management as well, go ahead and make a new folder in your filesystem (you can do this by right clicking "res://" and selecting Create New->Folder) and name it "Player". This is where we'll store all of the assets and files we make associated with this scene. Go ahead and drag and drop your player scene into this new folder. Your filesystem should look like this currently:
 
-![The FileSystem](../../media/BasketCatchImages/Making-the-Player/basket-filesystem-1.png)
+![The FileSystem](../../../media/BasketCatchImages/Making-the-Player/basket-filesystem-1.png)
 
 Before we do anything else we'll need to go online to find some assets. We'll need an image to represent our player. This could be anything you'd like, remember this is an **Aesthetic** choice. Keep in mind that the player is going to catch things falling from the sky. You can use Google Image Search or [Open Game Art](https://opengameart.org) to find a suitable image. In our example we'll use a basket.
 
@@ -37,7 +37,7 @@ Once you find your image, go ahead and download it. Make sure that it has a **tr
 
 <p align="center">
 
-<img src="../../media/BasketCatchImages/Making-the-Player/file_import_gif.gif" width="852" height="480" />
+<img src="../../../media/BasketCatchImages/Making-the-Player/file_import_gif.gif" width="852" height="480" />
 
 </p>
 
@@ -53,7 +53,7 @@ Next let's add some more nodes to our scene. We'll need to add two nodes, one to
 
 - CollisionShape2D (Shape)
 
-![Player Node Structure](../../media/BasketCatchImages/Making-the-Player/player-node-structure-1.png)
+![Player Node Structure](../../../media/BasketCatchImages/Making-the-Player/player-node-structure-1.png)
 
 
 </details>
@@ -64,14 +64,14 @@ Depending on the size of your image you may need to resize it. You can do this b
 
 <p align="center">
 <video width="640" height="360" autoplay muted loop>
-    <source src="../../media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
+    <source src="../../../media/BasketCatchImages/Making-the-Player/collision-shape-vid-1.mp4" type="video/mp4">
 </video>
 </p>
 
 
 In order for us to move our player we'll need to add a script. Go ahead and click on the player and press the *attach script* button. We'll select the "CharacterBody2D: Basic Movement" template as a starting place. If we've already named our **Root Node** the default script name will be the name of that node! Make sure once you've made the script that it is in your "Player" folder. We'll need to modify this script to make our player behave how we expect it to. 
 
-![New Script Dialogue Box](../../media/BasketCatchImages/Making-the-Player/Player-script.png)
+![New Script Dialogue Box](../../../media/BasketCatchImages/Making-the-Player/Player-script.png)
 
 
 After you've saved everything let's try running the current scene to see what happens. Does the player act as you expect?
@@ -151,7 +151,7 @@ func _physics_process(delta: float) -> void:
 
 Let's go ahead and run our current scene again and try to move the player using the arrow keys. You should be able to move left and right but not up and down. Let's also take a second to make sure that all of our nodes are at origin. Go ahead and click on each node, starting with the root node, and make sure that their **x** and **y** **Position** in the **Inspector** under the **Transform** are both set to **0**.
 
-![Set the position to origin](../../media/BasketCatchImages/Making-the-Player/set-to-origin.png)
+![Set the position to origin](../../../media/BasketCatchImages/Making-the-Player/set-to-origin.png)
 
 
 Now let's add our player to the *Main* scene. Switch to the *Main* scene by either clicking on the "Main" tab in the scene tabs or by double clicking the "main.tscn" file in the *FileSystem* dock. Then drag your player into your *Main* scene, placing them somewhere near the bottom of the screen. Go ahead and run the *Main* scene and attempt to catch the falling apple. What happens? Why does this happen?
@@ -169,7 +169,7 @@ Now let's add our player to the *Main* scene. Switch to the *Main* scene by eith
 
 We'll need to make a few edits to our script and player scene to address these issues. Let's start with our script. Go ahead and click the *script* icon attached to our *Player* node in the scene tree:
 
-![Opening a script from the tree](../../media/BasketCatchImages/Making-the-Player/Opening-a-script-from-the-tree.png)
+![Opening a script from the tree](../../../media/BasketCatchImages/Making-the-Player/Opening-a-script-from-the-tree.png)
 
 Then we'll need to add some code that *locks* our player's **y-axis** position. For this we'll need to create a **variable** to store the player's *initial* y position. We'll also need to add our **_ready()** function to this script.
 
