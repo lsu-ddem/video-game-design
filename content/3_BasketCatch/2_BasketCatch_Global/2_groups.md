@@ -71,8 +71,6 @@ Let's make some of our own collectibles now! Using the "apple" scene as a refere
 
 Once you've made all of your collectibles, you can add them to the spawner by following this video. You can also remove the "Apple" from the list or replace the image in the Apple scene if you would like.
 
-//Add Video Showing how to Add New Scenes to Spawner
-
 
 <p align="center">
 <video width="640" height="360" autoplay muted loop controls>
