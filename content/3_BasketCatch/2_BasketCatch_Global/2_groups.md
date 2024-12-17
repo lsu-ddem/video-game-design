@@ -103,7 +103,7 @@ Finally, our *Player* can currently exit the screen. We would like our player to
 
 - Using Nodes: We can use **StaticBody2D**s to create walls that stop the player from exiting the screen. 
 
-![Using Nodes](../../media/BasketCatchImages/MakeGlobal/Walls.png)
+![Using Nodes](../../../media/BasketCatchImages/MakeGlobal/Walls.png)
 
 - Using Code: We can modify the *Player* script to only allow the user to move left when the *Player*'s **x** position is *greater than or equal to* 0 and only move to the right when *less than or equal to* the width of the view (1152).
 
