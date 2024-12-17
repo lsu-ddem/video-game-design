@@ -253,7 +253,7 @@ If we our *Main* scene now we'll still notice an issue. While our *Player* now r
 
 <p align="center">
 <video width="640" height="360" autoplay muted loop>
-    <source src="../../media/BasketCatchImages/Making-the-Player/apple-fling.mp4" type="video/mp4">
+    <source src="../../../media/BasketCatchImages/Making-the-Player/apple-fling.mp4" type="video/mp4">
 </video>
 </p>
 
@@ -263,7 +263,7 @@ We'll need to make an edit to the collision of our *Player*, so lets switch back
 
 <p align="center">
 <video width="640" height="360" autoplay muted loop>
-    <source src="../../media/BasketCatchImages/Making-the-Player/duplicate-shape.mp4" type="video/mp4">
+    <source src="../../../media/BasketCatchImages/Making-the-Player/duplicate-shape.mp4" type="video/mp4">
 </video>
 </p>
 
