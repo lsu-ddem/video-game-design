@@ -1,5 +1,5 @@
 ---
-title: StaticBody
+title: Output
 weight: 2
 ---
 # Test
