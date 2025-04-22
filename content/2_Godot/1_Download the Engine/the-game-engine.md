@@ -24,7 +24,7 @@ Go to [www.godotengine.org](www.godotengine.org/download)
 
 2. The engine will download in a zipped folder, go ahead and unzip the folder by right-clicking and selecting "Extract All..."
 
-![Unzipping Godot](https://github.com/lsu-ddem/video-game-design/blob/master/content/media/vids/Recording%202025-04-21%20201047.mp4)
+[![Click here to see how to extract](https://i9.ytimg.com/vi/DrqS4S-tIRY/mqdefault.jpg?sqp=CJzpm8AG-oaymwEmCMACELQB8quKqQMa8AEB-AHyCIAC0AWKAgwIABABGFMgXyhlMA8=&rs=AOn4CLDhUL9mfndKcHA5pwDyA9r3JVru9g)](https://www.youtube.com/watch?v=DrqS4S-tIRY)
 
 2. Install Godot to your operating system and create a project folder.
 
