@@ -16,11 +16,15 @@ Some game engine's toolboxes are filled with specialized tools to make very spec
 
 ## How to Download Godot:
 
-Go to [www.godotengine.org](www.godotengine.org)
+Go to [www.godotengine.org](www.godotengine.org/download)
 
 1. Download the version for your operating system.
 
 *If students are on a chromebook there is an Android version available in the Google Play Store.
+
+2. The engine will download in a zipped folder, go ahead and unzip the folder by right-clicking and selecting "Extract All..."
+
+![Unzipping Godot](https://github.com/lsu-ddem/video-game-design/blob/master/content/media/vids/Recording%202025-04-21%20201047.mp4)
 
 2. Install Godot to your operating system and create a project folder.
 
