@@ -1,7 +1,4 @@
----
-title: Initial Setup
-weight: 1
----
+# Basket Catch: The Player
 
 We'll start by making our player, a basket that can move left and right at the bottom of the screen that can catch the falling fruit.
 

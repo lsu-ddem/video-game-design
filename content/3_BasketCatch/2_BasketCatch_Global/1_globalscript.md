@@ -1,7 +1,4 @@
----
-title: Making a Global Script
-weight: 1
----
+
 
 Often we'll want to have a script that we can access from anywhere in our project that does not get deleted from scene to scene. This kind of script, often called a **Singleton** or in Godot terms an **Autoload**, is very powerful and allows us to store and manipulate data game-wide. We'll use these kinds of scripts for any multi-stage game, any game with persistent data, and any game that uses UI to communicate the state of the player. Let's start by creating our global script.
 
