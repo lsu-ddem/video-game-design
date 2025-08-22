@@ -7,4 +7,6 @@ way to transition between them. This is the job of a **Finite State Machine Play
 
 ### Method One: The Asset Library
 
-Godot has a built in Asset Library that has many useful pre-built tools. From here we can download a very powerful **Finite State Machine Player** called *
+Godot has a built in Asset Library that has many useful pre-built tools. From here we can download a very powerful **Finite State Machine Player** called *gd-YAFSM*. We can access the **Asset Library** by clicking the **Asset Library** view at the top of the **Godot** program:
+
+![Asset Library Tab](content/media/PlatformerImages/asset-library-tab.png)
